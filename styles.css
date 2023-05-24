@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Suwannaphum&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Suwannaphum", serif;
+    color: white;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, black, #1a1a1a);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: 3px solid white;
+}
+
+#navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#navPaul {
+    font-size: 20px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-underline-offset: 10px;
+    font-size: 20px;
+    transition: .4s;
+}
+
+nav ul li a:hover {
+    color: rgb(181, 172, 223);
+    transition: .4s;
+    text-underline-offset: 6px;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+#allMainContent {
+    background: rgb(23,208,156);
+    background: linear-gradient(45deg, #6B5CA5, #ed7bb2, #0011a6, #00A6A6);
+    background-size: cover;
+}
+
+#About, #Resume, #Contact, #Projects {
+    width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgba(236, 227, 227, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    opacity: 0;
+    color: black;
+    position: relative;
+    border-radius: 10px;
+}
+
+.contentSection h2 {
+    text-align: center;
+    font-size: 68px;
+    margin: 0;
+    padding: 20px;
+}
+
+#About {
+    top: 200px;
+}
+
+#Resume, #Contact, #Projects {
+    top: 200px;
+}
+
+#Contact {
+    margin-bottom: 200px;
+}
+
+#AboutFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#AboutFlex img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 3px 3px black, -3px -3px black;
+}
+
+#AboutFlex p {
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.SkillsFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Skill {
+    width: 25%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    background:rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+
+#HardSkills {
+    margin: 40px 0px;
+}
+
+#SoftSkills {
+    margin: 40px 0px;
+}
+
+.experienceFlex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.experience {
+    width: 35%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    background:rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+
+.project {
+    width: 40%;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    background:rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+
+#ArApp iframe {
+    border: 3px solid white;
+    box-shadow: 3px 3px black, -3px -3px black;
+}
+
+#ArApp {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Experiences {
+    margin: 40px 0px;
+}
+
+#About h3, #Resume h3 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+footer {
+    background: linear-gradient(to right, black, #1a1a1a);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: 3px solid white;
+}
+
+#Education {
+    text-align: center;
+}
+
+#Education h4 {
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+
+#Education p {
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+}
+
+.ui-widget-header {
+    background: rgb(62, 45, 137);
+    color: #333333;
+    font-weight: bold;
+    height: 10px;
+ }
+
+.ProgressBar {
+    background:#919191;
+    height: 10px;
+    border: 2px solid #6f6f6f;
+}
+
+.SkillTitle {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+}
+
+.likeFloatLeft {
+    float: left;
+    margin: 10px;
+    border: 3px solid white;
+    box-shadow: 3px 3px black, -3px -3px black;
+}
+
+.likeFloatRight {
+    float: right;
+    margin: 10px;
+    border: 3px solid white;
+    box-shadow: 3px 3px black, -3px -3px black;
+}
+
+.like {
+    padding: 10px;
+    margin: 5px;
+}
+
+.likeTitle {
+    font-size: 26px;
+    text-align: center;
+}
+
+#jokeArea {
+    text-align: center;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #2c2c2c, #0c0c0c);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #939393, #d7d7d7);
+}
+
+.song {
+    text-align: center;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.song a {
+    color: rgb(44, 78, 178);
+    text-decoration: none;
+    transition: .4s;
+}
+
+.song a:visited {
+    color: rgb(153, 26, 195);
+}
+
+ @media only screen and (max-width: 768px) {
+    #AboutFlex {
+        flex-direction: column;
+    }
+
+    #AboutFlex img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #AboutFlex p {
+        font-size: 16px;
+    }
+
+    .Skill {
+        width: 100%;
+    }
+
+    .experience {
+        width: 100%;
+    }
+
+    #About h3, #Resume h3, #Contact h3, #Projects h3 {
+        font-size: 30px;
+    }
+
+    #Education h4 {
+        font-size: 20px;
+    }
+
+    #Education p {
+        font-size: 16px;
+    }
+
+    nav img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
