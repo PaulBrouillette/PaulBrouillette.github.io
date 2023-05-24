@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Paul Brouillette</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href=”https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css” rel =”stylesheet”>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script>
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                var height = $(window).height();
+                if (scrollTop > 2400) {
+                    $('#Resume').animate({ opacity: 1, top: 175 }, 1000);
+                    
+                }
+
+                if (scrollTop > 5800) {
+                    $('#Projects').animate({ opacity: 1, top: 175 }, 1000);
+                }
+
+                if (scrollTop > 7000) {
+                    $('#Contact').animate({ opacity: 1, top: 175 }, 1000);
+                }
+            });
+
+            $(document).ready(function() {
+                $('#About').animate({ opacity: 1, top: 175 }, 1000);
+            });
+
+            $(function() {
+                $( "#progressbar-Java" ).progressbar({
+                    value: 80
+                });
+                $( "#progressbar-CSharp" ).progressbar({
+                    value: 75
+                });
+                $( "#progressbar-GMS" ).progressbar({
+                    value: 75
+                });
+                $( "#progressbar-Agile" ).progressbar({
+                    value: 70
+                });
+                $( "#progressbar-HTML" ).progressbar({
+                    value: 75
+                });
+                $( "#progressbar-SQL" ).progressbar({
+                    value: 50
+                });
+                $( "#progressbar-JS" ).progressbar({
+                    value: 65
+                });
+                $( "#progressbar-Python" ).progressbar({
+                    value: 50
+                });
+                $( "#progressbar-Teamwork" ).progressbar({
+                    value: 90
+                });
+                $( "#progressbar-Communication" ).progressbar({
+                    value: 80
+                });
+                $( "#progressbar-Time" ).progressbar({
+                    value: 75
+                });
+                $( "#progressbar-Problem" ).progressbar({
+                    value: 70
+                });
+                
+            });
+
+            function getJoke(initial = false) {
+                var jokes = ["So there was this guy on a hill, and he had a giant pumpkin for a head, like a big gourd. Another guy walks up the hill and says, 'What happened?' The pumpkin head guy goes, 'Well, there was this genie guy and he granted me three wishes but I really screwed up.' So the regular guy asks, 'Well, what happened?' Pumpkin head goes, 'Well for my first wish, I asked for like a hundred million dollars and I got that, and for my second wish I wished for a beautiful woman to be my wife and I got that too. But for the third wish I really blew it.' The regular guy says, 'Well, what happened? Did you try to cheat the genie, did he punish you for asking for infinite wishes?' The pumpkin head guy goes, 'No, I wished for a giant pumpkin head.'", "So there was this kid playing outside with some blocks and other child toys. He was having so much fun, as much fun as a kid can have playing with blocks. I mean he was having an absolute blast playing with those blocks and using his imagination. His mom calls him in to help with dinner and the kid asks, 'What's for dinner mom?' His mom says 'Chicken with thyme.' The kid is shocked to hear this. He is perturbed. Dare I say, distraught. So the kid sets the table and he goes back to playing, but he just can't have any more fun. He tries his hardest, playing with his blocks and all, but he just can't have any fun anymore. His dad comes home after work and notices that the kid has a frown and a downtrodden expression. His dad asks, 'Son, why the long face?' The kid goes, 'Dad, mom's making chicken for dinner, but she's putting THYME on it! And I don't know why, but thyme always makes me gloomy.' The dad says, 'Well son, fun flies when you're having thyme.'", "So there was this family with one hundred kids. They were named after the order in which they were born, the first being named ‘One’, the second ‘Two’ and so on. They built a huge church on their land all to themselves so they could all fit into it during their day of worship. However, one day during service the church caught fire and everyone sans one person survived, one of the kids who was named ‘Ninety’. Life went on, and she eventually had children of her own. Her children found a stray dog and wanted to keep it, but Ninety was allergic to dogs, so the kids secretly kept it anyway but named the dog ‘This’ so they could talk about the dog in secret like a codename. One day their dog ran away, only ninety's kids will remember This."];
+                if (initial) {
+                    return jokes[Math.floor(Math.random() * jokes.length)];
+                }
+                jokeArea = document.getElementById("jokeArea");
+                var joke = jokes[Math.floor(Math.random() * jokes.length)];
+                while (jokeArea.innerHTML == joke) {
+                    joke = jokes[Math.floor(Math.random() * jokes.length)];
+                }
+                return joke;
+            }
+
+            $(document).ready(function() {
+                $('#jokeArea').click(function() {
+                    $('#jokeArea').fadeOut(400, function() {
+                        var newJoke = getJoke();
+                        $('#jokeArea').html(newJoke);
+                        $('#jokeArea').fadeIn(400);
+                    });
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div style = "width: 20%;">
+                <p id = "navPaul">Paul Brouillette</p>
+            </div>
+            <div style = "width: 50%;">
+                <ul id = "navFlex">
+                    <li><a href="#AboutAnchor" id = "navAboutLink">About</a></li>
+                    <li><a href="#ResumeAnchor">Resume</a></li>
+                    <li><a href="#ProjectsAnchor">Projects</a></li>
+                    <li><a href="#ContactAnchor">Contact</a></li> 
+                </ul>
+            </div>
+            <div style = "width: 25%;">
+                <a href = "https://www.linkedin.com/in/paulbbrouillette/" target = "_blank"><img src = "images/LinkedInLogo.png" alt = "LinkedIn's Logo"></a>
+                <a href = "https://github.com/PaulBrouillette" target = "_blank"><img src = "images/GitHubLogo.png" alt = "GitHub's Logo"></a>
+            </div>
+        </nav>
+        <div id = "allMainContent">
+            <br id = "AboutAnchor">
+            <div id = "About" class = "contentSection">
+                <h2>Hi, I'm Paul</h2>
+                <div id = "AboutFlex">
+                    <img src = "images/Paul.jpg" alt = "Picture of Paul Brouillette">
+                    <p>
+                        I'm a graduate from Siena College with a Bachelor's Degree in Computer Science.
+                        I'm from a really tiny town called Waterville in Central New York and I'm the middle child of three.<br><br>
+                        Currently, I'm looking for a full-time position as a Software Engineer. I'm interested in working on
+                        anything related to code, as I absolutely love to figure out crafty solutions to problems through code.<br><br>
+                        If you have a position that you think I'd be a good fit for, go ahead and jump down to the <a href = "#Contact" style = "color: rgb(27, 16, 76);">contact section</a> &#128076;
+                        If not, feel free to explore the rest of my website to learn more about what I like, what I can do, and what I've been up to.
+                    </p>
+                </div>
+                <h3>What I like</h3>
+                <h4 class = "likeTitle">History</h4>
+                <div class = "like">
+                    <img src = "images/medievalRabbits.jpg" alt = "Medieval illumination of two rabbits mugging a man" class = "likeFloatLeft">
+                    <p>
+                        If history stands to tell us what humans were like in the past, then we can conclude that humans were pretty weird.
+                        Back in the Middle Ages, especially when the Black Death hit Europe, monks drew pictures like the one to the left
+                        because rabbits were responsible for eating crops that were meant to feed people. While rabbits probably didn't 
+                        mug people in the Middle Ages, I think odd imagery like this is though provoking because it shows that people even
+                        hundreds of years ago had a sense of humor, contrary to the traditional view of the Middle Ages as a dark and boring time.
+                    </p>
+                    <div style = "clear: both"></div>
+                </div>
+                <h4 class = "likeTitle">Hiking</h4>
+                <div class = "like">
+                    <img src = "images/outdoors.jpg" alt = "Picture of a waterfall at Thatcher Park" class = "likeFloatRight">
+                    <p>
+                        Any good programmer knows that sitting behind a desk for hours at a time isn't the greatest thing for the body. And 
+                        even though hiking won't cure the inevitable carpal tunnel, I find that it trains both the body and the mind. You never
+                        know what you mind find on a hike, like a nice little waterfall, and the fresh air can really rejuvenate your mind. The best
+                        work that I put out is usually after a nice hike or even a walk around the block.
+                    </p>
+                    <div style = "clear: both"></div>
+                </div>
+                <h4 class = "likeTitle">Jokes</h4>
+                <div class = "like">
+                    <p>
+                        Second to Benadryl, I consider laughter to be the best medicine. However, the jokes I tell have been desribed as "odd",
+                        "strange", and "anti-humor". If you don't think they're that funny, that's ok. I think they're funny. Judge for yourself with the following joke:<br>
+                    </p>
+                    <div id = "jokeArea" onclick = "getJoke();">
+                        Click me for a joke!
+                    </div>
+                    
+                </div>
+                <h4 class = "likeTitle">Music</h4>
+                <div class = "like">
+                    <p style = "text-align: center;">
+                        My favorite songs are always changing, but here are some of my favorites right now
+                    </p>
+                    <ul>
+                        <li class = "song"><a href = "https://youtu.be/VAWjsVoDpm0" target = "_blank">Got the Life</a> by <cite>Korn</cite></li>
+                        <li class = "song"><a href = "https://youtu.be/yjJL9DGU7Gg" target = "_blank">Interstate Love Song</a> by <cite>Stone Temple Pilots</cite></li>
+                        <li class = "song"><a href = "https://youtu.be/ODTv9Lt5WYs" target = "_blank">I Stay Away</a> by <cite>Alice in Chains</cite></li>
+                        <li class = "song"><a href = "https://youtu.be/G6Kspj3OO0s" target = "_blank">Linger</a> by <cite>The Cranberries</cite></li>
+                        <li class = "song"><a href = "https://youtu.be/2Lpw3yMCWro" target = "_blank">Knives Out</a> by <cite>Radiohead</cite></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <br>
+            <br id = "ResumeAnchor">
+            <div id = "Resume" class = "contentSection">
+                <h2>Resume</h2>
+                <a target = "_blank" href = "PBrouillette_ResumeMay22.docx.pdf" download style = "text-align: center; font-size: 24px; color: rgb(27, 16, 76);"><p>View the PDF version here</p></a>
+                <div id = "Education">
+                    <h3>Education</h3>
+                    <h4>Siena College</h4>
+                    <p>Bachelor of Science in Computer Science<br>September 2020 - May 2023<br>3.84 GPA</p>
+                </div>
+                <div id = "Experiences">
+                    <h3>Experiences</h3>
+                    <div class = "experienceFlex">
+                        <div class = "experience">
+                            <h4>Summer Intern</h4>
+                            <p><em>Siena College ~ May 2022 - July 2022</em></p>
+                            <p>I worked with a Siena College professor and 3 other students to create a query processing model for <a href = "https://trec.nist.gov/" target = "_blank">NIST's TREC competition</a></p>
+                            <p>I was in charge of query rewriting, I used models like <a href = "https://huggingface.co/castorini/t5-base-canard" target = "_blank">this one</a></p>
+                            <p>I got a nice introduction to AI and Machine Learning, as well as brushing up on my Python skills</p>
+                        </div>
+                        <div class = "experience">
+                            <h4>Student Consultant</h4>
+                            <p><em>Siena College ~ October 2022 - April 2023</em></p>
+                            <p>Worked for Siena College's ITS Department as a student consultant</p>
+                            <p>Assisted students and alumni with technical problems, usually related to password resets</p>
+                            <p>Achieved 100% customer satisfaction; there was no one that I couldn't help</p>
+                        </div>
+                        <div class = "experience">
+                            <h4>Student Worker</h4>
+                            <p><em>Siena College ~ September 2020 - April 2023</em></p>
+                            <p>Worked in Siena College's Computer Science building to provide aid to professors</p>
+                            <p>Achieved strong organizational skills and attention to detail by organizing the floor's library and collaborating with the professors to create personalized biographies that were displayed in the hallway</p>
+                        </div>
+                        <div class = "experience">
+                            <h4>Career Readiness Faculty Initiative Student Ambassador</h4>
+                            <p><em>Siena College ~ February 2023 - May 2023</em></p>
+                            <p>Collaborated with 11 Siena College faculty to infuse employability skills to students</p>
+                            <p>Leveraged my perspective as a student to contribute to the ongoing evolution and growth of Siena College's educational mission, and to help current and future students</p>
+                        </div>
+                        <div class = "experience">
+                            <h4>Career Readiness Open House Panelist</h4>
+                            <p><em>Siena College ~ October 2022 - April 2023</em></p>
+                            <p>Participated in several Open Houses and Accepted Students' Days for prospetive Siena College students</p>
+                            <p>Empowered prospective students and families to make informed decisions about their educational journey</p>
+                            <p>Engaged with over 100 families at a time to answer questions, provide guidance and share career experience with prospective families</p>
+                        </div>
+                    </div>
+                </div>
+                <div id = "HardSkills">
+                    <h3>Technical Skills</h3>
+                    <div class = "SkillsFlex">
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Java</p>
+                            <div id = "progressbar-Java" class = "ProgressBar"></div>
+                            <p>3 years of experience through school: Java is my strongest language!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">C#</p>
+                            <div id = "progressbar-CSharp" class = "ProgressBar"></div>
+                            <p>I learned C# through doing the AR Touring App through Unity!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">GameMaker: Studio</p>
+                            <div id = "progressbar-GMS" class = "ProgressBar"></div>
+                            <p>I taught myself the GMS language over the summer making my game, Anachromania!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Agile Scrum</p>
+                            <div id = "progressbar-Agile" class = "ProgressBar"></div>
+                            <p>I've worked for a year with Scrum on my AR Touring App!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">HTML/CSS</p>
+                            <div id = "progressbar-HTML" class = "ProgressBar"></div>
+                            <p>Several classes and online resources taught me how to do web design!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">JavaScript</p>
+                            <div id = "progressbar-JS" class = "ProgressBar"></div>
+                            <p>I know vanilla JS, a little Node.JS and some jQuery!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">SQL</p>
+                            <div id = "progressbar-SQL" class = "ProgressBar"></div>
+                            <p>I know a little Oracle SQL through a class!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Python</p>
+                            <div id = "progressbar-Python" class = "ProgressBar"></div>
+                            <p>I worked with Python for my summer internship!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id = "SoftSkills">
+                    <h3>Interpersonal Skills</h3>
+                    <div class = "SkillsFlex">
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Teamwork</p>
+                            <div id = "progressbar-Teamwork" class = "ProgressBar"></div>
+                            <p>I love to collaborate with others to solve problems!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Communication</p>
+                            <div id = "progressbar-Communication" class = "ProgressBar"></div>
+                            <p>Speaking at open houses and being a student ambassador has strengthened my communication skills!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Time Management</p>
+                            <div id = "progressbar-Time" class = "ProgressBar"></div>
+                            <p>Having two on campus jobs has motivated to spend my time wisely!</p>
+                        </div>
+                        <div class = "Skill">
+                            <p class = "SkillTitle">Problem Solving</p>
+                            <div id = "progressbar-Problem" class = "ProgressBar"></div>
+                            <p>I love to come up with crafy and new solutions to solve problems!</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <br id = "ProjectsAnchor">
+            <div id = "Projects" class = "contentSection">
+                <h2>Projects</h2>
+                <div id = "ArApp">
+                    <div class = "project">
+                        <h4>AR Touring App</h4>
+                        <h5>Unity Game Engine, C#, Vuforia, Agile Scrum</h5>
+                        <p>
+                            For the Siena College comp sci capstone course Software Engineering I & II, teams are assigned to start a new
+                            or continue an old project. My team continued work on a project that was started by a previous team, a touring app
+                            for the Siena College campus. The app uses augmented reality to display information about rooms and is made to be 
+                            a self guided tour for prospective students. I was heavily involved in the code for the app, and our team made 
+                            huge strides to the contribution of the app, completing the entire third floor of the school's science building. I will be coming back
+                            to the project as a liaison for the next team to help their endeavours. Check out the code <a target = "_blank" href = "https://github.com/SienaCollegeSoftwareEngineering/SoS_F19S20_F20S21_F21S22_F22S23">here</a> 
+                        </p>
+                    </div>
+                    <div style = "display: flex; flex-direction: column;">
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gBph3t7X4zY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/op-Gj_5xlls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Anachromania">
+                    <div class = "project" style = "display: block; margin: 25px auto; width: 50%;">
+                        <h4>Anachromania</h4>
+                        <h5>GameMaker: Studio</h5>
+                        <p>
+                            Anachromania is a game that I started to make during the Summer of 2022, after my internship ended. I have always
+                            wanted to make a game, and decided that I learned enough about programming to make one. I used GameMaker: Studio
+                            to make the game, and I learned the language mainly through self teaching. It's not nearly as popular as Unity or
+                            Unreal Engine, so there's less tutorials but more oppurtunity to be creative and crafy. Check out the code <a target = "_blank" href = "https://github.com/PaulBrouillette/Anachromania-Code">here</a>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <br id = "ContactAnchor">
+            <div id = "Contact" class = "contentSection">
+                <h2>Contact</h2>
+                <div style = "text-align: center; list-style-type: none;">
+                    <ul>
+                        <li>Email: paulbbrouillette@gmail.com</li>
+                        <li>Call/Text me toll free: 315-939-4126</li>
+                        <li><a href = "https://www.linkedin.com/in/paulbbrouillette/" target = "_blank">LinkedIn</a></li>
+                        <li><a href = "https://github.com/PaulBrouillette" target = "_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <footer style = "margin-top: 100px;">
+                &copy; Paul Brouillette. Just kidding it's not copywritten, just nice to put this here
+            </footer>
+        </div>
+    </body>
+</html>
